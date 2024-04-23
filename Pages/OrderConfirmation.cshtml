@@ -1,0 +1,18 @@
+﻿@page
+@model BackendApp1.Pages.OrderConfirmationModel
+@inject BackendApp1.Data.AccessControl accessControl
+@{
+    ViewData["Title"] = "Orderbekräftelse";
+}
+
+<h1>Orderbekräftelse</h1>
+
+<div>
+    <p>Hej @accessControl.LoggedInAccountName</p>
+    <p>Tack för ditt köp.</p>
+    <p>Totalsumma för beställningen: @Model.TotalPrice Kr</p>
+</div>
+
+<a asp-page="/Index" class ="button">Tillbaka till startsidan</a>
+
+
